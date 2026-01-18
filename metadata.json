@@ -1,0 +1,7 @@
+{
+  "name": "NeonCast 2077",
+  "description": "A high-fidelity cyberpunk weather dashboard featuring real-time atmospheric data visualization.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

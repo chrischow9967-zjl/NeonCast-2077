@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeonCast 2077</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                bg: '#050505',
+                green: '#00ff41',
+                red: '#ff003c',
+                blue: '#00f3ff',
+                yellow: '#fcee0a',
+                glass: 'rgba(5, 5, 5, 0.7)',
+              }
+            },
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+              display: ['"Orbitron"', 'sans-serif'],
+            },
+            animation: {
+              'glitch-1': 'glitch-anim-1 2.5s infinite linear alternate-reverse',
+              'glitch-2': 'glitch-anim-2 3s infinite linear alternate-reverse',
+              'scanline': 'scanline 8s linear infinite',
+              'pulse-neon': 'pulse-neon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              'glitch-anim-1': {
+                '0%': { clipPath: 'inset(20% 0 80% 0)' },
+                '20%': { clipPath: 'inset(60% 0 10% 0)' },
+                '40%': { clipPath: 'inset(40% 0 50% 0)' },
+                '60%': { clipPath: 'inset(80% 0 5% 0)' },
+                '80%': { clipPath: 'inset(10% 0 70% 0)' },
+                '100%': { clipPath: 'inset(30% 0 20% 0)' },
+              },
+              'glitch-anim-2': {
+                '0%': { clipPath: 'inset(10% 0 60% 0)' },
+                '20%': { clipPath: 'inset(30% 0 20% 0)' },
+                '40%': { clipPath: 'inset(70% 0 10% 0)' },
+                '60%': { clipPath: 'inset(20% 0 50% 0)' },
+                '80%': { clipPath: 'inset(50% 0 30% 0)' },
+                '100%': { clipPath: 'inset(0% 0 80% 0)' },
+              },
+              scanline: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' },
+              },
+              'pulse-neon': {
+                '0%, 100%': { opacity: '1', filter: 'brightness(1.2)' },
+                '50%': { opacity: '.8', filter: 'brightness(0.8)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #e0e0e0;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00ff41; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00f3ff; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.26.2",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
